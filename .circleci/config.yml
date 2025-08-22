@@ -2479,19 +2479,6 @@ workflows:
             - circleci-repo-readonly-authenticated-github-token
           requires:
             - initialize
-      # IN-MEMORY (base)
-      - op-acceptance-tests:
-          # Acceptance Testing params
-          name: memory-base
-          gate: base
-          # CircleCI params
-          no_output_timeout: 10m
-          context:
-            - circleci-repo-readonly-authenticated-github-token
-            - discord
-          requires:
-            - contracts-bedrock-build
-            - cannon-prestate-quick
       # IN-MEMORY (all)
       - op-acceptance-tests:
           name: memory-all
@@ -2568,19 +2555,6 @@ workflows:
             - circleci-repo-readonly-authenticated-github-token
           requires:
             - initialize
-      # IN-MEMORY (base)
-      - op-acceptance-tests:
-          # Acceptance Testing params
-          name: memory-base
-          gate: base
-          # CircleCI params
-          no_output_timeout: 10m
-          context:
-            - circleci-repo-readonly-authenticated-github-token
-            - discord
-          requires:
-            - contracts-bedrock-build
-            - cannon-prestate-quick
       # IN-MEMORY (all)
       - op-acceptance-tests:
           name: memory-all
